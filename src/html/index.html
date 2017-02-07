@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="wap-font-scale" content="no"/>
+    <meta content="knight" name="Keywords">
+    <meta content="knight" name="description">
+    <title>移动端popupbox</title>
+    <link rel="stylesheet" href="../sass/index.scss?rev=@@hash"></head>
+<body>
+    <div class="container">
+        <!-- 使用按钮弹窗 -->
+        <div class="popupwrap"></div>
+        <div class="popupbox">
+            <h3 class="title">兑换成功</h3>
+            <p class="desc">商品名称，有效期：7天</p>
+            <div class="btn-confirm">知道了</div>
+            <div class="g-choose-box">
+                <div class="btn-yes">确认</div>
+                <div class="btn-no">取消</div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/popupbox.js?rev=@@hash" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // 定义一个弹窗对象
+        var popupbox = new Popupbox();
+        // use 1
+        popupbox.set('对不起，无法兑换', '123');
+
+        // use 2
+        popupbox.set('确认兑换', '确认兑换吗？', function() {
+            alert(123);
+            popupbox.hide();
+
+        });
+        // 展示方式，一直展示
+        popupbox.show();
+        // 5s后关闭，单个按钮时有效
+        // popupbox.show(5);
+    </script>
+</body>
+</html>
