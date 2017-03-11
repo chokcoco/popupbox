@@ -1,7 +1,7 @@
 # popupbox
 a mobile popupbox component
 
-## Use
+## Usage
 使用：`var popupbox = new Popupbox()`，兼容AMd、CMD。
 
 ## API
